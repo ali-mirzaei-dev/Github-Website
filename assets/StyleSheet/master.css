@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+@layer components {
+
+    .btn1 {
+        @apply capitalize border border-[#8080809a] text-white px-3 py-1 rounded-lg font-bold hover:bg-[#292b5e]
+    }
+
+    .dropdown {
+        @apply bg-black border border-[gray] flex flex-wrap absolute top-full left-0 w-270 **:font-medium pt-8 z-20 rounded-xl
+    }
+    .dropdown2 {
+        @apply bg-black border border-[gray] flex flex-wrap absolute top-full left-0 w-190 **:font-medium pt-8 z-20 rounded-xl
+    }
+    .dropdown3 {
+        @apply bg-black border border-[gray] flex flex-wrap absolute top-full left-0 w-150.75 **:font-medium pt-8 z-20 rounded-xl
+    }
+
+    .droprow {
+        @apply w-full flex px-9 items-start content-start pb-8
+    }
+    .droprow2 {
+        @apply w-full flex px-9 items-start content-start pb-8 justify-between
+    }
+
+
+    .dropcol {
+        @apply w-1/4 flex flex-wrap content-start gap-4.5
+    }
+    .dropcol2 {
+        @apply w-1/2 flex flex-wrap content-start gap-4.5
+    }
+
+    .costumul {
+        @apply flex flex-wrap **:items-center *:w-full gap-3.5
+    }
+
+    .costuma {
+        @apply flex flex-wrap *:last:w-full gap-x-1.5 relative *:nth-[3]:text-[#a4aea6] *:nth-[3]:text-[14px]!  after:content-[''] after:absolute after:bg-gray-400 after:w-0 after:h-0.5 hover:after:w-12.5 after:duration-300 after:top-full
+    }
+
+
+
+
+    .droprowb {
+        @apply bg-[#0f1511] w-full py-5 px-9 flex rounded-b-xl
+    }
+}
+
+@layer base {
+    h6 {
+        @apply text-[#a4aea6] text-[14px] font-medium w-full
+    }
+}
+
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
