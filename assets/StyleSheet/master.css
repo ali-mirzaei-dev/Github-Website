@@ -101,6 +101,7 @@
     --animate-bobrot: bobrot 30s linear infinite;
     --animate-bobrot2: bobrot2 30s linear 5s infinite;
     --animate-marquee: marquee 30s linear infinite;
+    --color-bc: #808080c0
 }
 
 body {
@@ -130,5 +131,49 @@ body {
         right: 0;
         width: 10%;
         height: 100%;
+    }
+}
+
+.mask2 {
+    &::after {
+        content: "";
+        width: 60%;
+        position: absolute;
+        top: 0;
+        left: 20%;
+        transform: translateY(-70%) rotate(-45deg);
+        filter: blur(40px);
+        padding: 30% 0px;
+        background: radial-gradient(circle at 0px 100%, rgb(230, 183, 254) 10%, rgb(80, 73, 194) 20%, rgba(87, 78, 255, 0) 60%);
+        z-index: -1;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 200px;
+        bottom: 90%;
+        left: 50%;
+        transform: translatex(-50%);
+        background-image: url(../Images/particles-170bd1fd231f4669.png);
+        background-size: 50% 100%;
+        z-index: -1;
+    }
+}
+
+.mask3 {
+    &::before {
+        content: "";
+        filter: blur(40px);
+        position: absolute;
+        background: radial-gradient(rgb(167, 162, 255) 30%, rgba(147, 80, 255, 0.5));
+        border-radius: 50%;
+        width: 300%;
+        height: 200px;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
     }
 }
