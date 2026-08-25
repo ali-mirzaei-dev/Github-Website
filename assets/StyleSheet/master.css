@@ -239,3 +239,18 @@ body {
         background: linear-gradient(315deg, black 10%, rgba(0, 0, 0, 0.774) 30%, transparent 70%);
     }
 }
+
+.mask7 {
+    &::before{
+        content: "";
+        position: absolute;
+        background: #2c2268;
+        background: radial-gradient(ellipse farthest-corner at center center, #4a37b4 0%, transparent 80%);
+        height: 200px;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% ,-50%);
+        z-index: -1;
+    }
+}
