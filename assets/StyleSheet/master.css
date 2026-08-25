@@ -44,7 +44,7 @@
     }
 
     .costuma {
-        @apply flex flex-wrap *:last:w-full gap-x-1.5 relative *:nth-[3]:text-[#a4aea6] *:nth-[3]:!text-[14px] after:content-[''] after:absolute after:bg-gray-400 after:w-0 after:h-0.5 hover:after:w-12.5 after:duration-300 after:top-full
+        @apply flex flex-wrap *:last:w-full gap-x-1.5 relative *:nth-[3]:text-[#a4aea6] *:nth-[3]:text-[14px]! after:content-[''] after:absolute after:bg-gray-400 after:w-0 after:h-0.5 hover:after:w-12.5 after:duration-300 after:top-full
     }
 
     .droprowb {
@@ -55,8 +55,12 @@
         @apply w-full flex flex-wrap justify-center
     }
 
-    .card{
+    .card {
         @apply w-full flex flex-wrap content-start md:w-1/2 lg:w-1/3 border border-bc pt-14 border-t-0
+    }
+
+    .card2 {
+        @apply w-full md:w-1/3 flex flex-wrap content-start relative *:nth-[1]:h-82.5 md:*:nth-[1]:h-106.25 *:nth-[1]:w-full *:nth-[2]:absolute *:nth-[2]:top-1/10 *:nth-[2]:left-1/2 *:nth-[2]:-translate-x-1/2 *:nth-[3]:absolute *:nth-[3]:bottom-0
     }
 }
 
@@ -227,11 +231,11 @@ body {
     }
 }
 
-.mask6{
-    &::before{
+.mask6 {
+    &::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(315deg , black 10% ,rgba(0, 0, 0, 0.774) 30%,transparent 70% ) ;
+        background: linear-gradient(315deg, black 10%, rgba(0, 0, 0, 0.774) 30%, transparent 70%);
     }
 }
