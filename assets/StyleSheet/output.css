@@ -239,8 +239,14 @@
   .mt-12 {
     margin-top: calc(var(--spacing) * 12);
   }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
   }
   .ml-3 {
     margin-left: calc(var(--spacing) * 3);
@@ -468,6 +474,12 @@
   .border-slate-300 {
     border-color: var(--color-slate-300);
   }
+  .border-white {
+    border-color: var(--color-white);
+  }
+  .border-white\! {
+    border-color: var(--color-white) !important;
+  }
   .border-t-bc {
     border-top-color: var(--color-bc);
   }
@@ -528,6 +540,12 @@
   .px-1\.5 {
     padding-inline: calc(var(--spacing) * 1.5);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\! {
+    padding-inline: calc(var(--spacing) * 2) !important;
+  }
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }
@@ -543,6 +561,12 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
+  .py-1 {
+    padding-block: var(--spacing);
+  }
+  .py-1\! {
+    padding-block: var(--spacing) !important;
+  }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
@@ -554,9 +578,6 @@
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
-  }
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
   }
   .py-14 {
     padding-block: calc(var(--spacing) * 14);
@@ -587,9 +608,6 @@
   }
   .pb-0\! {
     padding-bottom: 0px !important;
-  }
-  .pb-5 {
-    padding-bottom: calc(var(--spacing) * 5);
   }
   .pb-10 {
     padding-bottom: calc(var(--spacing) * 10);
@@ -655,9 +673,6 @@
   }
   .text-\[\#ffffffd9\] {
     color: #ffffffd9;
-  }
-  .text-\[px\] {
-    color: px;
   }
   .text-white {
     color: var(--color-white);
@@ -876,6 +891,9 @@
     }
   }
   @media (width >= 40rem) {
+    .sm\:w-2\/3 {
+      width: calc(2 / 3 * 100%);
+    }
     .sm\:w-3\/4 {
       width: calc(3 / 4 * 100%);
     }
@@ -924,6 +942,9 @@
     .md\:p-3 {
       padding: calc(var(--spacing) * 3);
     }
+    .md\:px-3\! {
+      padding-inline: calc(var(--spacing) * 3) !important;
+    }
     .md\:pt-10 {
       padding-top: calc(var(--spacing) * 10);
     }
@@ -932,6 +953,9 @@
     }
     .md\:text-\[38px\] {
       font-size: 38px;
+    }
+    .md\:text-\[40px\] {
+      font-size: 40px;
     }
     .md\:text-\[42px\] {
       font-size: 42px;
