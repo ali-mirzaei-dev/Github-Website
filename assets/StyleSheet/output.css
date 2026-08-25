@@ -353,6 +353,9 @@
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
@@ -391,6 +394,9 @@
     border-top-left-radius: var(--radius-lg);
     border-top-right-radius: var(--radius-lg);
   }
+  .rounded-tl-2xl {
+    border-top-left-radius: var(--radius-2xl);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -399,9 +405,17 @@
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
+  .border-r-0 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 0px;
+  }
   .border-b-0 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 0px;
+  }
+  .border-l-0 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 0px;
   }
   .border-\[\#8c93fb\] {
     border-color: #8c93fb;
@@ -417,6 +431,9 @@
   }
   .border-b-bc {
     border-bottom-color: var(--color-bc);
+  }
+  .border-l-bc {
+    border-left-color: var(--color-bc);
   }
   .bg-\[\#1f1f2a\] {
     background-color: #1f1f2a;
@@ -469,6 +486,9 @@
   .px-3\.5 {
     padding-inline: calc(var(--spacing) * 3.5);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -483,6 +503,9 @@
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
+  }
+  .pt-0 {
+    padding-top: 0px;
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
@@ -510,6 +533,9 @@
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pl-4 {
+    padding-left: calc(var(--spacing) * 4);
   }
   .text-center {
     text-align: center;
@@ -595,6 +621,9 @@
   :is(.\*\:flex > *) {
     display: flex;
   }
+  :is(.\*\:h-1\/2 > *) {
+    height: calc(1 / 2 * 100%);
+  }
   :is(.\*\:h-2\.5 > *) {
     height: calc(var(--spacing) * 2.5);
   }
@@ -606,6 +635,9 @@
   }
   :is(.\*\:flex-wrap > *) {
     flex-wrap: wrap;
+  }
+  :is(.\*\:content-center > *) {
+    align-content: center;
   }
   :is(.\*\:content-start > *) {
     align-content: flex-start;
@@ -628,8 +660,14 @@
   :is(.\*\:bg-\[\#ffffff56\] > *) {
     background-color: #ffffff56;
   }
+  :is(.\*\:px-4 > *) {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   :is(.\*\:px-10 > *) {
     padding-inline: calc(var(--spacing) * 10);
+  }
+  :is(.\*\:py-20 > *) {
+    padding-block: calc(var(--spacing) * 20);
   }
   :is(.\*\:text-\[14px\] > *) {
     font-size: 14px;
@@ -821,6 +859,9 @@
       --tw-leading: calc(var(--spacing) * 15);
       line-height: calc(var(--spacing) * 15);
     }
+    :is(.\*\:md\:py-0 > *) {
+      padding-block: 0px;
+    }
     :is(.\*\:md\:text-\[22px\] > *) {
       font-size: 22px;
     }
@@ -850,6 +891,9 @@
     .lg\:w-\[60\%\] {
       width: 60%;
     }
+    .lg\:w-full {
+      width: 100%;
+    }
     .lg\:items-center {
       align-items: center;
     }
@@ -862,11 +906,29 @@
     .lg\:border-b-bc {
       border-bottom-color: var(--color-bc);
     }
+    .lg\:border-l-bc {
+      border-left-color: var(--color-bc);
+    }
     .lg\:p-4 {
       padding: calc(var(--spacing) * 4);
     }
     .lg\:text-\[28px\] {
       font-size: 28px;
+    }
+    .lg\:text-\[40px\] {
+      font-size: 40px;
+    }
+    :is(.\*\:lg\:h-auto > *) {
+      height: auto;
+    }
+    :is(.\*\:lg\:w-1\/2 > *) {
+      width: calc(1 / 2 * 100%);
+    }
+    :is(.\*\:lg\:py-20 > *) {
+      padding-block: calc(var(--spacing) * 20);
+    }
+    :is(.\*\:lg\:pl-10 > *) {
+      padding-left: calc(var(--spacing) * 10);
     }
     :is(.\*\:lg\:text-\[36px\] > *) {
       font-size: 36px;
@@ -1167,6 +1229,24 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .card {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-top-style: var(--tw-border-style);
+    border-top-width: 0px;
+    border-color: var(--color-bc);
+    padding-top: calc(var(--spacing) * 14);
+    @media (width >= 48rem) {
+      width: calc(1 / 2 * 100%);
+    }
+    @media (width >= 64rem) {
+      width: calc(1 / 3 * 100%);
+    }
+  }
 }
 @layer base {
   h6 {
@@ -1296,6 +1376,12 @@ body {
   background: radial-gradient(circle at 0 100%, #e6b7fe 20%, #5049c2 40%, #3a37ff00 50%);
   filter: blur(50px);
   z-index: -1;
+}
+.mask6::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(315deg , black 10% ,rgba(0, 0, 0, 0.774) 30%,transparent 70% );
 }
 @property --tw-border-style {
   syntax: "*";
