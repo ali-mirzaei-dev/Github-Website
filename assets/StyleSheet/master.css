@@ -44,7 +44,7 @@
     }
 
     .costuma {
-        @apply flex flex-wrap *:last:w-full gap-x-1.5 relative *:nth-[3]:text-[#a4aea6] *:nth-[3]:text-[14px]! after:content-[''] after:absolute after:bg-gray-400 after:w-0 after:h-0.5 hover:after:w-12.5 after:duration-300 after:top-full
+        @apply flex flex-wrap *:last:w-full gap-x-1.5 relative *:nth-[3]:text-[#a4aea6] *:nth-[3]:!text-[14px] after:content-[''] after:absolute after:bg-gray-400 after:w-0 after:h-0.5 hover:after:w-12.5 after:duration-300 after:top-full
     }
 
     .droprowb {
@@ -105,6 +105,12 @@
 
     to {
         transform: translateX(-50%);
+    }
+}
+
+@keyframes bgmove {
+    to {
+        background-position: 250% 0;
     }
 }
 
@@ -241,7 +247,7 @@ body {
 }
 
 .mask7 {
-    &::before{
+    &::before {
         content: "";
         position: absolute;
         background: #2c2268;
@@ -250,7 +256,15 @@ body {
         width: 80%;
         top: 50%;
         left: 50%;
-        transform: translate(-50% ,-50%);
+        transform: translate(-50%, -50%);
         z-index: -1;
     }
 }
+
+.mask8 {
+    background: linear-gradient(90deg, white 10%, lime 30%, white 40%, white 80%, white 100%);
+    background-clip: text;
+    background-size: 500% 100%;
+    animation: bgmove 3s linear infinite;
+}
+
